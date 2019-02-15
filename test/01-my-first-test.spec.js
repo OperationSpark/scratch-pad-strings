@@ -11,7 +11,7 @@ describe("#my-first-test", function () {
     afterEach(function () {
         console.log.restore();
     });
-    var assignment = require('../day-1/my-first-test');
+    var assignment = require('../js/my-first-test');
     
     describe("print", function () {
         it('should log the given value', function() {

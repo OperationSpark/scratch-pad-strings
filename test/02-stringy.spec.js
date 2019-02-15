@@ -11,7 +11,7 @@ describe("#stringy", function () {
     afterEach(function () {
         console.log.restore();
     });
-    var assignment = require('../day-1/stringy');
+    var assignment = require('../js/stringy');
     describe("length", function () {
         it('should return the length of the input String', function() {
             expect(assignment.length('hello')).to.equal(5);
