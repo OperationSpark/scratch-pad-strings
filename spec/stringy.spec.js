@@ -73,26 +73,18 @@ describe("#stringy", function () {
     });
     
     describe("sortAscending()", function () {
-        it('should return 1 if stringOne is alphabetically higher than stringTwo', function() {
-            expect(sortAscending('abc', 'acb')).to.equal(1);
-        });
-        it('should return -1 if stringOne is alphabetically lower than stringTwo', function() {
-            expect(sortAscending('acb', 'abc')).to.equal(-1);
-        });
-        it('should return 0 if stringOne is alphabetically equivalent to stringTwo', function() {
-            expect(sortAscending('abc', 'abc')).to.equal(0);
+         it('should compare strings to determine their alphabetical order', function() {
+            expect(sortAscending('abc', 'acb')).to.equal(1, 'should return 1 if stringOne is alphabetically higher than stringTwo');
+            expect(sortAscending('acb', 'abc')).to.equal(-1, 'should return -1 if stringOne is alphabetically lower than stringTwo');
+            expect(sortAscending('abc', 'abc')).to.equal(0, 'should return 0 if stringOne is alphabetically equivalent to stringTwo');
         });
     });
     
     describe("sortDescending()", function () {
-        it('should return -1 if stringOne is alphabetically lower than stringTwo', function() {
-            expect(sortDescending('abc', 'acb')).to.equal(-1);
-        });
-        it('should return 1 if stringOne is alphabetically higher than stringTwo', function() {
-            expect(sortDescending('acb', 'abc')).to.equal(1);
-        });
-        it('should return 0 if stringOne is alphabetically equivalent to stringTwo', function() {
-            expect(sortDescending('abc', 'abc')).to.equal(0);
+        it('should compare strings to determine their alphabetical order', function() {
+            expect(sortDescending('abc', 'acb')).to.equal(-1, 'should return -1 if stringOne is alphabetically lower than stringTwo');
+            expect(sortDescending('acb', 'abc')).to.equal(1, 'should return 1 if stringOne is alphabetically higher than stringTwo');
+            expect(sortDescending('abc', 'abc')).to.equal(0, 'should return 0 if stringOne is alphabetically equivalent to stringTwo');
         });
     });
 });
