@@ -38,14 +38,14 @@ describe("#stringy", function () {
     describe("beginsWith()", function () {
         it('should return true if the input String begins with the input character, false otherwise', function() {
             expect(beginsWith('Hello World', 'h')).to.be.true;
-            expect(beginsWith('Hello World', 'H')).to.be.true;
+            expect(beginsWith('hello World', 'H')).to.be.true;
             expect(beginsWith('Hello World', 'a')).to.be.false;
         });
     });
     
     describe("endsWith()", function () {
         it('should return true if the input String ends with the input character, false otherwise', function() {
-            expect(endsWith('Hello World', 'd')).to.be.true;
+            expect(endsWith('Hello WorlD', 'd')).to.be.true;
             expect(endsWith('Hello World', 'D')).to.be.true;
             expect(endsWith('Hello World', 'a')).to.be.false;
         });
